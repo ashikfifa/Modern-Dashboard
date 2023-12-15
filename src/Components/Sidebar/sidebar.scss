@@ -1,0 +1,148 @@
+.navigation {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background: #493971;
+  transition: 0.5s;
+  overflow: hidden;
+
+  .iconLi{
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+.svgPosition{
+  padding-left: 100%;
+  padding-top: 100%;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    width: 60px;
+  }
+  .mobile-menu-open {
+    width: 100%;
+  }
+
+}
+  
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  .toggle-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    &.open {
+      transform: rotate(-45deg);
+
+      &:before {
+        transform: translateY(8px) rotate(-90deg);
+      }
+
+      &:after {
+        transform: translateY(-8px) rotate(90deg);
+      }
+    }
+  }
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-inline-start: 3px !important;
+}
+
+ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+ul li:hover {
+  background-color: white;
+}
+
+ul li:hover .title {
+  color: black !important;
+}
+
+.active {
+  width: 100%;
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: -6%;
+  pointer-events: none;
+  margin-top: 10%;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation ul li.active {
+  background-color: white;
+}
+
+.navigation ul li.active .title {
+  color: black;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 66px;
+  text-align: center;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 0px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+color : white;
+}
+
+.titleLogo {
+  font-size: 20px;
+  font-weight: 600;
+}
