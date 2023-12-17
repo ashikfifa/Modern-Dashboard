@@ -1,0 +1,17 @@
+.friendsCard{
+    width: 100%;
+    height: 210px;
+    background-color: white;
+    border: 1px solid #edeef1;
+    padding: 3px 5px;
+
+    .title{
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .desc{
+        font-weight: 400;
+        font-size: 10px;
+        padding-top: 2%;
+    }
+}

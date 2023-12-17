@@ -3,7 +3,14 @@ import "./dashboard.scss";
 import SubCards from "../Components/SubCard/SubCards";
 import ActivityCard from "../Components/activityCard/ActivityCard";
 import PersonalCard from "../Components/personalCard/PersonalCard";
+import bellIcon from "../Svgs/bell.svg";
+import msgIcon from "../Svgs/message.svg";
+import ThirdCard from "../Components/thirdCard/ThirdCard";
+import FriendsCard from "../Components/friendsCard/FriendsCard";
 const Dashboard = () => {
+  const messiImg =
+    "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRdI-Nv-Uy-uBJJkIKQmdWhEFG6oy4lPIoBha2LOaMputUjw5-Ltnn3-SQqhymuDZtcQDaxS0wbUXf2Ko0";
+
   return (
     <>
       <div className="" style={{ paddingLeft: "2%" }}>
@@ -35,33 +42,15 @@ const Dashboard = () => {
                           <p className="title">
                             Longest Distance Cycling:4 miles
                           </p>
-                          <img
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              borderRadius: "2px",
-                              float: "right",
-                              marginBottom:"4%"
-                            }}
-                            src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRdI-Nv-Uy-uBJJkIKQmdWhEFG6oy4lPIoBha2LOaMputUjw5-Ltnn3-SQqhymuDZtcQDaxS0wbUXf2Ko0"
-                          />
+                          <img className="imgStyle" src={messiImg} />
                         </div>
                       </Col>
                       <Col lg={6}>
-                      <div className="skattingCard">
+                        <div className="skattingCard">
                           <p className="title">
                             Longest Roller-Skatting:2 hours
                           </p>
-                          <img
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              borderRadius: "2px",
-                              float: "right",
-                              marginBottom:"4%"
-                            }}
-                            src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRdI-Nv-Uy-uBJJkIKQmdWhEFG6oy4lPIoBha2LOaMputUjw5-Ltnn3-SQqhymuDZtcQDaxS0wbUXf2Ko0"
-                          />
+                          <img className="imgStyle" src={messiImg} />
                         </div>
                       </Col>
                     </Row>
@@ -72,9 +61,33 @@ const Dashboard = () => {
           </Col>
           <Col lg={3}>
             <div className="thirdCard">
-aa
+              <div className="thirdCardFlex">
+                <div>
+                  {" "}
+                  <img src={bellIcon} />{" "}
+                </div>
+                <div>
+                  {" "}
+                  <img src={msgIcon} />{" "}
+                </div>
+                <div> Kelsey Miller</div>
+                <div>
+                  {" "}
+                  <img className="imgStyle" src={messiImg} />{" "}
+                </div>
+              </div>
+
+              <ThirdCard/>
+
+              <p className="title">Friends Activity</p>
+
+              <FriendsCard/>
+
+              <div style={{paddingTop:"4%"}}>
+              <FriendsCard/>
+              </div>
             </div>
-             </Col>
+          </Col>
         </Row>
       </div>
     </>
