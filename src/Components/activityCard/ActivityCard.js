@@ -3,7 +3,7 @@ const ActivityCard = () => {
   return (
     <>
       <Row>
-        <Col lg={3}>
+        <Col xs={12} lg={3}>
           <img
             style={{
               width: "100%",
@@ -22,8 +22,9 @@ const ActivityCard = () => {
             src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRdI-Nv-Uy-uBJJkIKQmdWhEFG6oy4lPIoBha2LOaMputUjw5-Ltnn3-SQqhymuDZtcQDaxS0wbUXf2Ko0"
           />
         </Col>
-        <Col lg={5}>
-          <img
+        <Col xs={12} lg={5}>
+          
+          <img className="imgMediaQ"
             style={{
               width: "100%",
               height: "100%",
@@ -31,8 +32,9 @@ const ActivityCard = () => {
             }}
             src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRdI-Nv-Uy-uBJJkIKQmdWhEFG6oy4lPIoBha2LOaMputUjw5-Ltnn3-SQqhymuDZtcQDaxS0wbUXf2Ko0"
           />
+         
         </Col>
-        <Col md={4}>
+        <Col xs={12} md={4}>
           <div style={{ display: "flex" }}>
             <div style={{ marginRight: "10px" }}>
               <img
